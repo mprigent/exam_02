@@ -33,7 +33,7 @@ static void ft_putnbr(long nb, char *base)
 
 	if (nb < 0)
 	{
-		write(1, "-", 1);
+		ft_putchar('-');
 		nb = -nb;
 	}
 	if (nb / base_len > 0)
@@ -41,7 +41,7 @@ static void ft_putnbr(long nb, char *base)
 	write(1, &base[nb % base_len], 1);
 }
 
-int		ft_printf(const char *format, ...)
+int ft_printf(const char *format, ...)
 {
 	va_list	args;
 	char	*str;
