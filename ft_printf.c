@@ -29,16 +29,16 @@ static int nbrlen(long nb, int len)
 
 static void ft_putnbr(long nb, char *base)
 {
-	const size_t base_len = ft_strlen(base);
+	const size_t len = ft_strlen(base);
 
 	if (nb < 0)
 	{
 		ft_putchar('-');
 		nb = -nb;
 	}
-	if (nb / base_len > 0)
-		ft_putnbr(nb / base_len, base);
-	write(1, &base[nb % base_len], 1);
+	if (nb / len > 0)
+		ft_putnbr(nb / len, base);
+	write(1, &base[nb % len], 1);
 }
 
 int ft_printf(const char *format, ...)
