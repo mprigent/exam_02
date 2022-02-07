@@ -14,7 +14,7 @@ size_t ft_strlen(char *str)
 	return (i);
 }
 
-static int	nbrlen(long nb, int len)
+static int nbrlen(long nb, int len)
 {
 	int	i = 1;
 	if (nb < 0)
@@ -27,7 +27,7 @@ static int	nbrlen(long nb, int len)
 	return (i);
 }
 
-static void	ft_putnbr(long nb, char *base)
+static void ft_putnbr(long nb, char *base)
 {
 	const size_t base_len = ft_strlen(base);
 
