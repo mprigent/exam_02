@@ -1,17 +1,17 @@
 #include <unistd.h>
 #include <stdarg.h>
 
+void ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 size_t ft_strlen(char *str)
 {
 	size_t i = 0;
 	while(str && str[i])
 		i++;
 	return (i);
-}
-
-void ft_putchar(char c)
-{
-	write(1, &c, 1);
 }
 
 static int	nbrlen(long nb, int len)
@@ -29,7 +29,7 @@ static int	nbrlen(long nb, int len)
 
 static void	ft_putnbr(long nb, char *base)
 {
-	const size_t	base_len = ft_strlen(base);
+	const size_t base_len = ft_strlen(base);
 
 	if (nb < 0)
 	{
