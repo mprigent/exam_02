@@ -7,11 +7,11 @@ int main(int ac, char **av){
 	(void)ac;
 	
 	fd = open(av[1], O_RDONLY);
-    while ((line = get_next_line(fd)) != 0)
+    	while ((line = get_next_line(fd)) != 0)
 	{
 		printf("%s", line);
 		free(line);
-    }
+	}
 	close(fd);
 	system("leaks a.out");
 	return (0);
